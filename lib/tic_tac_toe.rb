@@ -81,7 +81,7 @@ def won?(board)
   end
 
   if winning_combination != nil
-    winner = board[winning_combination[0]]
+    winner = true
   else
     winner = false
   end
@@ -113,7 +113,7 @@ def over?(board)
 end
 
 def winner(board)
-  winner = board[won?(board)[0]]
+  winner = won?(board)
 end
 
 def play(board)
