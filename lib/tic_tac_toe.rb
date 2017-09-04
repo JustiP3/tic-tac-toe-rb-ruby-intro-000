@@ -42,7 +42,7 @@ def move(board, index, player)
 end
 
 def turn(board, player)
-  valid = false 
+  valid = false
   while valid == false do
     puts "Please enter 1-9:"
     input = gets.strip
