@@ -127,7 +127,7 @@ def play(board)
   end
   if won?(board)
     player = winner(board)
-    puts "Congratulations, player #{player}, you win!"
+    puts "Congratulations #{player}!"
   else
     puts "It's a Tie Game!"
   end
