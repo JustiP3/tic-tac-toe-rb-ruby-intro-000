@@ -42,13 +42,13 @@ def move(board, index, player)
 end
 
 def turn(board)
-  valid = false  
+  valid = false
   while valid == false do
     player = current_player(board)
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    if valid_move?(board, index) 
+    if valid_move?(board, index)
       move(board, index, player)
       display_board(board)
       valid = true
@@ -114,7 +114,7 @@ def winner(board)
 end
 
 def play(board)
-  while over?(board) == false do    
+  while over?(board) == false do
     turn(board)
   end
 
