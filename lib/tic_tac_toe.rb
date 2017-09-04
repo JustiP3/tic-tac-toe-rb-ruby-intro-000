@@ -79,7 +79,7 @@ def won?(board)
   winning_combination = WIN_COMBINATIONS.detect do |combo|
     (board[combo[0]] == "X" || board[combo[0]] == "O") && board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
   end
-  
+
   if winning_combination != nil
     winner = board[winning_combination[0]]
   else
