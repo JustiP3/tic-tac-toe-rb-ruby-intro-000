@@ -111,7 +111,7 @@ def winner(board)
 end
 
 def play(board)
-  while over?(board) == false
+  while over?(board) == false do 
     player = current_player(board)
     turn(board, player)
   end
