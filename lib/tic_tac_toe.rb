@@ -80,9 +80,9 @@ def won?(board)
     board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
   end
 
-  if board[winning_combination[0]] == "X" || board[winning_combination[0]] == "O"
+  if winning_combination != nil    
     winner = board[winning_combination[0]]
-  elsif draw?
+  else
     winner = false
   end
 
@@ -95,7 +95,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if full?(board) && !won?(board) 
+  if full?(board) && !won?(board)
     draw = true
   else
     draw = false
