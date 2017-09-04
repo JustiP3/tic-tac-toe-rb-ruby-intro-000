@@ -129,7 +129,7 @@ def play(board)
     player = winner(board)
     puts "Congratulations #{player}!"
   else
-    puts "It's a Tie Game!"
+    puts "Cat's Game!"
   end
 
 end
