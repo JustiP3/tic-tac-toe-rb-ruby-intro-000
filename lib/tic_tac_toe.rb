@@ -125,7 +125,8 @@ def play(board)
   while !over?(board)  do
     turn(board)
   end
-  if won?(board) 
+  if won?(board)
+    player = winner(board)
     puts "Congratulations, player #{player}, you win!"
   else
     puts "It's a Tie Game!"
