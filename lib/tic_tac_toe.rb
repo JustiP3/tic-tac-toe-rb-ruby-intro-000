@@ -76,14 +76,10 @@ end
   end
 
 def won?(board)
-  WIN_COMBINATIONS.each do |combo|
-    if board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
-      won = combo
-    else
-      won = false
-    end
+  WIN_COMBINATIONS.any? do |combo|
+    board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
   end
-  won
+  
 end
 
 def full?(board)
