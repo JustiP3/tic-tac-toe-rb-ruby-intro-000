@@ -62,6 +62,8 @@ def turn_count(board)
       count +=1
     end
   end
+end
+
 
   def current_player(board)
     if turn_count(board) % 2 == 0
@@ -111,7 +113,7 @@ def winner(board)
 end
 
 def play(board)
-  while over?(board) == false do 
+  while over?(board) == false do
     player = current_player(board)
     turn(board, player)
   end
