@@ -82,7 +82,7 @@ def won?(board)
 
   if board[winning_combination[0]] == "X" || board[winning_combination[0]] == "O"
     winner = board[winning_combination[0]]
-  else
+  elsif draw?
     winner = false
   end
 
@@ -95,7 +95,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if full?(board) && won?(board) == false
+  if full?(board) && !won?(board) 
     draw = true
   else
     draw = false
