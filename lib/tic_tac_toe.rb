@@ -79,7 +79,7 @@ def won?(board)
   WIN_COMBINATIONS.any? do |combo|
     board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
   end
-  
+
 end
 
 def full?(board)
