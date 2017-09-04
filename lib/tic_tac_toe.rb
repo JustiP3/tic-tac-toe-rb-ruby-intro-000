@@ -103,7 +103,7 @@ def draw?(board)
 end
 
 def over?(board)
-  if won?(board) != false || draw?(board) == true
+  if won?(board) == true || draw?(board) == true
     over = true
   elsif turn_count(board) == 9
     over = true
@@ -125,7 +125,6 @@ def play(board)
   while over?(board) == false do
     turn(board)
   end
-
   if won?(board) != false
     puts "Congratulations, player #{player}, you win!"
   else
