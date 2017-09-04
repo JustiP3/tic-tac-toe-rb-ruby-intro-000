@@ -76,8 +76,14 @@ end
   end
 
 def won?(board)
-  WIN_COMBINATIONS.any? do |combo|
+  winning_combination = WIN_COMBINATIONS.detect do |combo|
     board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]]
+  end
+  
+  if board[winning_combination[0]] == "X" || board[winning_combination[0]] == "O"
+    winner = board[winning_combination[0]]
+  else
+    winner = false
   end
 
 end
